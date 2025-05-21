@@ -8,25 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const animationDuration = 9000;
     const fadeOutDuration = 1000;
 
-    sprite.style.animation = `play-sprite ${animationDuration}ms steps(${totalFrames}) 1`;
-
     setTimeout(() => {
-        sprite.style.animation = 'none';
-        sprite.style.backgroundPosition = `-${frameWidth * (totalFrames - 1)}px 0`;
-        intro.style.opacity = 0;
+        sprite.style.animation = `play-sprite ${animationDuration}ms steps(${totalFrames}) 1`;
 
         setTimeout(() => {
-            intro.style.display = 'none';
-            mainContent.style.display = 'block';
-            setTimeout(() => mainContent.classList.add('show'), 10);
-        }, fadeOutDuration);
-    }, animationDuration);
+            sprite.style.animation = 'none';
+            sprite.style.backgroundPosition = `-${frameWidth * (totalFrames - 1)}px 0`;
+            intro.style.opacity = 0;
+
+            setTimeout(() => {
+                intro.style.display = 'none';
+                mainContent.style.display = 'block';
+                setTimeout(() => mainContent.classList.add('show'), 10);
+            }, fadeOutDuration);
+        }, animationDuration);
+
+    }, 4000);
 
     setTimeout(() => {
         document.querySelector('.maquina-escribir').classList.add('maquina-visible');
-      }, 12000);
-      
+    }, 4000 + animationDuration); 
 });
+
 // -----------------------
   const ticker = document.querySelector(".ticker-inner");
   ticker.innerHTML += ticker.innerHTML;

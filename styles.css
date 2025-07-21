@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
 }
 
 .maquina-visible {
-  animation: typing 3s steps(21) forwards, blink 0.5s infinite step-end alternate;
+  animation: typing 3s steps(29) forwards, blink 0.5s infinite step-end alternate;
   opacity: 1;
 }
 
@@ -364,7 +364,7 @@ body::-webkit-scrollbar {
 
 /* ------------------------------------------- */
 .ticker-habilidades {
-  overflow: hidden;
+  /* overflow: hidden; */
   white-space: nowrap;
   width: 100%;
   -webkit-box-reflect: below -1.6rem linear-gradient(transparent, rgba(0, 0, 0, 0.033));
@@ -372,7 +372,7 @@ body::-webkit-scrollbar {
 
 .ticker-inner {
   display: inline-block;
-  animation: ticker-loop 35s linear infinite;
+  animation: ticker-loop 55s linear infinite;
 }
 
 .ticker-inner span {
@@ -909,15 +909,32 @@ body::-webkit-scrollbar {
   overflow: hidden;
   border-right: 2px solid;
   display: inline-block;
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   text-align: center;
   user-select: none;
   }
 
   .maquina-visible {
-  animation: typing 3s steps(21) forwards, blink 0.5s infinite step-end alternate;
+  animation: typing 3s steps(29) forwards, blink 0.5s infinite step-end alternate;
   opacity: 1;
   }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 10em;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 
   .ticker-habilidades {
     margin-top: 1rem;

@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   /* ===== Config ===== */
-  const totalFrames = 133;
+  const totalFrames = 54;
   const frameWidth = 64;
-  const animationDuration = 9000; 
-  const fadeOutDuration = 1000; 
+  const animationDuration = 4000;
+  const fadeOutDuration = 1000;
 
   /* ===== Cache ===== */
   const sprite = document.querySelector('.sprite');
